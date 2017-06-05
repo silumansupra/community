@@ -287,10 +287,10 @@ data directory on the standby server. Run the following command:
 
         $ mv ../../var/lib/postgresql/9.3/main ../../var/lib/postgresql/9.3/main_old
 
-1. Run the backup utility. Replace `<primary-IP>` with the external IP address
+1. Run the backup utility. Replace `[[primary-IP]]` with the external IP address
 of the primary server.
 
-        $ sudo -u postgres pg_basebackup -h <primary IP> -D /var/lib/postgresql/9.3/main -U repuser -v -P --xlog-method=stream
+        $ sudo -u postgres pg_basebackup -h [[primary IP]] -D /var/lib/postgresql/9.3/main -U repuser -v -P --xlog-method=stream
 
     The backup utility will prompt you for the password for the user named
     `repuser`.
